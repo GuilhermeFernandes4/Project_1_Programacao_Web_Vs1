@@ -9,29 +9,38 @@
 </head>
 <body>
     <nav>
-        <button class="btn-back" onclick="window.history.back()">Voltar</button>
+        <button class="btn-back" onclick="window.history.back()">Back</button>
     </nav>
-<div class="container">
-    <h2>Registro</h2>
-    <form action="#" method="post">
-        <label for="username">Nome de Usuário:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        
-        <label for="confirm-password">Repita a Senha:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-        <div>
-        <span><input type="checkbox" id="agree" required></span>   
-        <span><label for="agree">Eu concordo com os Termos de Uso e Política de Privacidade</label></span>
-        <input type="submit" value="Registrar">
-        </div>
-    </form>
-</div>
+    <div class="container">
+        <h2>Registro</h2>
+        <form action="#" method="post">
+            <div style="margin-top: 20px;">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div style="margin-top: 20px;">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div style="margin-top: 20px;"> <!-- Adiciona espaço entre o campo de e-mail e o campo de senha -->
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div style="margin-top: 20px;">
+                <label for="confirm-password">Repita a Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div style="margin-top: 20px;">
+                <span><input type="checkbox" id="agree" required></span>   
+                <span><label for="agree">Eu concordo com os Termos de Uso e Política de Privacidade</label></span>
+            </div>
+            <div style="margin-top: 20px;">
+                <input type="submit" value="Registrar">
+                <td colspan="2" style="text-align: right;"><a href="Saber_Mais.html">Learn More</a></td>
+            </div>
+        </form>
+    </div>
+    
 <footer class="footer">
     <p>&copy; 2024 Programação Web Projeto 1. Todos os direitos reservados.</p>
 </footer>
