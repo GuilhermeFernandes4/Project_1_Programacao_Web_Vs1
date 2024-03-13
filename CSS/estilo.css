@@ -11,16 +11,17 @@ header {
   background-color: #333;
   color: #fff;
   padding: 10px 20px; /* Espaçamento interno */
-  text-align: center; /* Alinhamento de texto */
+  text-align: left; /* Alinhamento de texto */
 }
 
 /* Estilo para navegação */
-nav {
+nav{
   background-color: black;
   color: #fff;
   padding: 20px;
-  text-align: left;
+  text-align: center;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
