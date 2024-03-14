@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
-</head>
-<body>
-<header>
-    <button class="btn-back" onclick="window.history.back()">Back</button>
-</header>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+    </head>
+    <body>
+        <header>
+            <button class="btn-back" onclick="window.history.back()">Back</button>
+        </header>
 
-<div class="login-form">
-    <h2>Login</h2>
-    <table>
-        <div> 
-            <tr>
-                <td>Email:</td>
-                <td><input type="email" placeholder="Seu e-mail"></td>
-            </tr>
-        </div>   
-        <div>
-            <tr>
-                <td>Senha:</td>
-                <td><input type="password" placeholder="Sua senha"></td>
-            </tr>
-        </div>        
-        <tr>
-            <td colspan="2" style="text-align: right;"><a href="Recuperar_Password.html">Esqueceu-se da password?</a></td>
-        </tr>
-        <tr>
-            <td colspan="2"><button type="submit">Login</button></td>
-        </tr>
-    </table>
+            <div class="login-form">
+            <h2>Login</h2>
+            <form>
+                 <div> 
+                    <label>Email:</label>
+                    <input type="email" placeholder="Your email">
+                </div>   
+                <div>
+                    <label>Password:</label>
+                    <input type="password" placeholder="Your password">
+                </div>        
+                <div>
+                    <a href="Recover_Password.html">Forgot your password?</a>
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+    </form>
 </div>
 
 <footer class="footer">
-    <p>&copy; 2024 Programação Web Projeto 1. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Web Programming Project 1. All rights reserved.</p>
 </footer>
 
 </body>
