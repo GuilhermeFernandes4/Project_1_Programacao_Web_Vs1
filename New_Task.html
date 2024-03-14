@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Tarefa</title>
+</head>
+<body>
+    <header>
+        <button class="btn-back" onclick="window.history.back()">Back</button>
+    </header>
+  
+    <div class="container">
+      <h2>Nova Tarefa</h2>
+      <form id="newTaskForm">
+        <div class="form-group">
+          <label for="taskDescription">Descrição:</label>
+          <input type="text" id="taskDescription" name="taskDescription" placeholder="Digite a descrição da tarefa" required>
+        </div>
+        <div class="form-group">
+          <label for="taskDate">Data:</label>
+          <input type="date" id="taskDate" name="taskDate" required>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Gravar">
+        </div>
+      </form>
+    </div>
+  <footer>
+    <p>&copy; 2024 My Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>

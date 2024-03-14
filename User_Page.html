@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="CSS/Login.css">
+  <style>
+    .selected {
+      cursor: pointer;
+    }
+    .checkbox-square {
+      display: none;
+    }
+    .checkbox-square + label {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .checkbox-square:checked + label {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <button class="btn-back" onclick="window.history.back()">Back</button>
+    </header>
+    <div class="menu-container">
+    <button id="menu-button">Menu</button>
+    <div class="menu-content" id="menu-content">
+      <img src="Imagens/Foto_Perfil.jpg"/>
+      <h3>Olá Guilherme</h3>
+      <a href="Manage_Profile.html"><button>Gerir perfil</button></a>    
+      <button id="logout-button">Terminar Sessão</button>
+    </div>
+  </div>
+
+  <script src="CSS/script.js"></script>
+  <div>
+    <span><h2>As minhas tarefas</h2></span>
+    <span> <a href="New_Task.html"><button class="new-task-button">+ Nova tarefa</button></a></span>
+  </div>
+
+  <table id="task-table">
+    <thead>
+      <tr>
+        <th>Tarefa</th>
+        <th>Data</th>
+        <th>Estado</th>
+        <th>Editar</th>
+      </tr>
+    </thead>
+    <tbody class="dynamic-task-list">
+      <tr>
+        <td>Fazer o Lab 1 de PW</td>
+        <td>14-03-2024</td>
+        <td class="state">
+          <input type="checkbox" id="checkbox1" class="checkbox-square">
+          <label for="checkbox1"></label>
+        </td>
+        <td class="edit-button" style="display:none;"><button onclick="editTask(this)">Editar</button></td>
+      </tr>
+      <tr>
+        <td>Fazer o Lab 2 de PW</td>
+        <td>27-03-2024</td>
+        <td class="state">
+          <input type="checkbox" id="checkbox2" class="checkbox-square">
+          <label for="checkbox2"></label>
+        </td>
+        <a href="Edit_Task.html"><td class="edit-button" style="display:none;"><button onclick="editTask(this)">Editar</button></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>  
+
+  <footer>
+    <p>&copy; 2024 My Page. All rights reserved.</p>
+</footer>
+
+<script>
+  // Adicionando funcionalidade de selecionar estado com "x"
+  const checkboxes = document.querySelectorAll('.checkbox-square');
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      const editButton = this.parentElement.parentElement.querySelector('.edit-button');
+      if (this.checked) {
+        checkboxes.forEach(checkbox => checkbox.checked = false);
+        this.checked = true;
+        editButton.style.display = 'block';
+      } else {
+        editButton.style.display = 'none';
+      }
+    });
+  });
+
+  // Função para editar tarefa
+  function editTask(button) {
+    const taskRow = button.parentElement.parentElement;
+    const taskName = taskRow.querySelector('td:first-child').textContent;
+    const taskDate = taskRow.querySelector('td:nth-child(2)').textContent;
+
+    // Obter elementos da tabela
+    const taskNameInput = document.createElement('input');
+    taskNameInput.type = 'text';
+    taskNameInput.value = taskName;
+    const taskDateInput = document.createElement('input');
+    taskDateInput.type = 'text';
+    taskDateInput.value = taskDate;
+
+    // Substituir texto por campos de entrada
+    taskRow.querySelector('td:first-child').textContent = '';
+    taskRow.querySelector('td:first-child').appendChild(taskNameInput);
+    taskRow.querySelector('td:nth-child(2)').textContent = '';
+    taskRow.querySelector('td:nth-child(2)').appendChild(taskDateInput);
+
+    // Alterar o texto do botão para "Salvar"
+    button.textContent = 'Salvar';
+    button.setAttribute('onclick', 'saveTask(this)');
+  }
+
+  // Função para salvar tarefa
+  function saveTask(button) {
+    const taskRow = button.parentElement.parentElement;
+    const taskNameInput = taskRow.querySelector('input[type="text"]:first-of-type');
+    const taskDateInput = taskRow.querySelector('input[type="text"]:nth-of-type(2)');
+
+    const taskName = taskNameInput.value;
+    const taskDate = taskDateInput.value;
+
+    // Aqui você pode adicionar a lógica para salvar a tarefa com os dados obtidos
+    console.log('Salvar tarefa:', taskName, taskDate);
+
+    // Restaurar a exibição original
+    taskRow.querySelector('td:first-child').textContent = taskName;
+    taskRow.querySelector('td:nth-child(2)').textContent = taskDate;
+
+    // Alterar o texto do botão de volta para "Editar"
+    button.textContent = 'Editar';
+    button.setAttribute('onclick', 'editTask(this)');
+  }
+</script>
+
+</body>
+</html>
