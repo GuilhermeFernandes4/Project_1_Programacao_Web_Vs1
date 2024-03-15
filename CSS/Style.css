@@ -220,4 +220,26 @@ body {
       background-color: #0056b3;
     }
 
-    
+    body {
+      font-family: Arial, sans-serif;
+  }
+  h1 {
+      text-align: center;
+  }
+  form {
+      width: 300px;
+      margin: 0 auto;
+      text-align: left;
+  }
+  label {
+      display: block;
+      margin-top: 10px;
+  }
+  input[type="text"], input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+  }
+  input[type="submit"] {
+      margin-top: 10px;
+  }

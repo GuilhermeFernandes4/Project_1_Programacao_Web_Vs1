@@ -3,34 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css">
     <title>Task Editor</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            text-align: center;
-        }
-        form {
-            width: 300px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input[type="text"], input[type="date"] {
-            width: 100%;
-            padding: 5px;
-            margin-top: 5px;
-        }
-        input[type="submit"] {
-            margin-top: 10px;
-        }
-    </style>
 </head>
 <body>
+    <header>
+        <button class="btn-back" onclick="window.history.back()">Back</button>
+    </header>
     <h1>Editar Tarefa</h1>
     <form>
         <label for="description">Descrição:</label>
