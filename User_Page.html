@@ -5,25 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
   <link rel="stylesheet" href="CSS/Login.css">
-  <style>
-    .selected {
-      cursor: pointer;
-    }
-    .checkbox-square {
-      display: none;
-    }
-    .checkbox-square + label {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .checkbox-square:checked + label {
-      background-color: #ccc;
-    }
-  </style>
 </head>
 <body>
     <header>
@@ -42,7 +23,7 @@
   <script src="CSS/script.js"></script>
   <div>
     <span><h2>As minhas tarefas</h2></span>
-    <span> <a href="New_Task.html"><button class="new-task-button">+ Nova tarefa</button></a></span>
+    <span> <a href="New_Task.html"><button style="float:right;" class="new-task-button">+ Nova tarefa</button></a></span>
   </div>
 
   <table id="task-table">
