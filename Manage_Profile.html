@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css"> <!-- Corrigido o caminho do arquivo CSS -->
   <title>Gerir Perfil</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
    
   <div class="container">
     <h1>Gerir Perfil</h1>
-    <form>
+    <form class="profile-form"> <!-- Adicionado a classe profile-form ao formulário -->
 
       <div class="profile-picture">
         <img src="Imagens/Foto_Perfil.jpg" alt="Foto de Perfil" />
@@ -30,10 +30,15 @@
 
       <div class="form-group">
         <label for="password">Nova senha:</label>
-        <input type="password" id="password" name="password" placeholder="Digite sua nova senha">
+        <input type="password" id="password" name="password" placeholder="Digite sua nova senha" required>
       </div>
 
-      <input type="submit" value="Salvar Alterações">
+      <div class="form-group">
+        <label for="confirm-password">Confirmar nova senha:</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua nova senha" required>
+      </div>
+
+      <input type="submit" class="btn-submit" value="Salvar Alterações"> <!-- Adicionada a classe btn-submit ao botão de envio -->
     </form>
   </div>
   <footer>
